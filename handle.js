@@ -1,5 +1,5 @@
 function handleText (client, event) {
-  console.log(message.text)
+  console.log(event.message.text)
   return client.replyMessage(event.replyToken, 'Shmoo')
 }
 
@@ -15,4 +15,4 @@ function Handler (client, event) {
   }
 }
 
-export default Handler
+module.exports = Handler

@@ -1,9 +1,9 @@
-function handleText (client, event) {
-  console.log(event.message.text)
-  return client.replyMessage(event.replyToken, {
-    type: 'text',
-    text: 'Shmoo'
-  })
+const handle = {
+  message: require('./message')
+  // follow: require('./follow'),
+  // unfollow: require('./unfollow'),
+  // join: require('./join'),
+  // leave: require('./leave')
 }
 
 function Handler (client, event) {
@@ -11,8 +11,8 @@ function Handler (client, event) {
     return console.log('Test hook recieved: ' + JSON.stringify(event.message))
   }
 
-  if (event.type === 'message' && event.message.type === 'text') {
-    return handleText(client, event)
+  if (handle[event.type] !== undefined) {
+    return handle[event.type](client, event)
   } else {
     throw new Error(`Unknown event: ${JSON.stringify(event)}`)
   }

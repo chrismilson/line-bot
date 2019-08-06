@@ -14,7 +14,7 @@ function text (client, event) {
       text: [
         'I didn\'t quite get that...',
         'Perhaps try one of these!'
-      ].join(''),
+      ].join('\n'),
       quickReply: {
         items: [
           {

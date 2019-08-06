@@ -1,5 +1,6 @@
-const express = require('express')
-const line = require('@line/bot-sdk')
+import express from 'express'
+import line from '@line/bot-sdk'
+import handle from './handle'
 
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,
@@ -10,20 +11,9 @@ const app = express()
 const port = process.env.PORT || 3000
 const client = new line.Client(config)
 
-var handleEvent = function (event) {
-  console.log(event)
-  if (event.type !== 'message' || event.message.type !== 'text') {
-    return Promise.resolve(null)
-  }
-
-  const echo = { type: 'text', text: event.message.text }
-
-  return client.replyMessage(event.replyToken, echo)
-}
-
 app.post('/callback', line.middleware(config), (req, res) => {
   Promise
-    .all(req.body.events.map(handleEvent))
+    .all(req.body.events.map(event => handle(client, event)))
     .then(reply => res.json(reply))
     .catch((err) => {
       console.error(err)

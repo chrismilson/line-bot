@@ -1,0 +1,23 @@
+{
+  "name": "line-bot",
+  "version": "1.0.0",
+  "description": "This Bot is for learning how to use line Messaging API with a bot in Node.js.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrismilson/line-bot.git"
+  },
+  "author": "Chris Milson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrismilson/line-bot/issues"
+  },
+  "homepage": "https://github.com/chrismilson/line-bot#readme",
+  "dependencies": {
+    "@line/bot-sdk": "^6.8.1",
+    "express": "^4.17.1"
+  }
+}

@@ -3,18 +3,18 @@ const keyword = {
 }
 
 function text (client, event) {
-  if (keyword[event.message.text] !== undefined) {
-    return keyword[event.message.text](client, event)
+  if (keyword[event.message.text.toLowerCase()] !== undefined) {
+    return keyword[event.message.text.toLowerCase()](client, event)
   }
 
   return client.replyMessage(
     event.replyToken,
     {
       type: 'text',
-      text: `
-        I didn'nt quite get that...
-        Perhaps try one of the quick replies!
-      `,
+      text: [
+        'I didn\'t quite get that...',
+        'Perhaps try one of these!'
+      ].join(''),
       quickReply: {
         items: [
           {
@@ -22,7 +22,7 @@ function text (client, event) {
             action: {
               type: 'message',
               label: 'Boom',
-              text: 'Slim shayz boiiiiiiii'
+              text: 'Shloo'
             }
           }
         ]

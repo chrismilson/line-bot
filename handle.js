@@ -12,7 +12,7 @@ function Handler (client, event) {
   }
 
   if (event.type === 'message' && event.message.type === 'text') {
-    handleText(client, event)
+    return handleText(client, event)
   } else {
     throw new Error(`Unknown event: ${JSON.stringify(event)}`)
   }

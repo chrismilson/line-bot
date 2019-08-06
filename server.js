@@ -1,6 +1,6 @@
-import express from 'express'
-import line from '@line/bot-sdk'
-import handle from './handle'
+const express = require('express')
+const line = require('@line/bot-sdk')
+const handle = require('./handle')
 
 const config = {
   channelAccessToken: process.env.CHANNEL_ACCESS_TOKEN,

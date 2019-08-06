@@ -1,6 +1,9 @@
 function handleText (client, event) {
   console.log(event.message.text)
-  return client.replyMessage(event.replyToken, 'Shmoo')
+  return client.replyMessage(event.replyToken, {
+    type: 'text',
+    text: 'Shmoo'
+  })
 }
 
 function Handler (client, event) {

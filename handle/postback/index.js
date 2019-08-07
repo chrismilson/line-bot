@@ -1,7 +1,7 @@
 const keywords = {
   projects: require('./projects'),
   tour: require('./tour'),
-  nothing: () => Promise.resolve(null),
+  nothing: require('./nothing'),
   random: require('./random')
 }
 

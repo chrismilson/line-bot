@@ -1,4 +1,4 @@
-const color = require('color')
+const color = require('../../color')
 
 function random (client, event) {
   color.randomise()

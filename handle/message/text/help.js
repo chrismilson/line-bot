@@ -28,11 +28,8 @@ function help (client, event) {
             layout: 'horizontal',
             contents: [
               {
-                type: 'filler'
-              },
-              {
                 type: 'image',
-                url: 'https://shlappas-line-bot.herokuapp.com/assets/images/butter.png'
+                url: 'https://shlappas-line-bot.herokuapp.com/images/butter.png'
               },
               {
                 type: 'text',

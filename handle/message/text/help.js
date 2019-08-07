@@ -92,7 +92,7 @@ function help (client, event) {
                 action: {
                   type: 'postback',
                   label: 'Random',
-                  data: 'colour change',
+                  data: 'random',
                   displayText: 'Change color!'
                 }
               }

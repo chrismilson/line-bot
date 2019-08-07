@@ -12,11 +12,11 @@ const keywords = [
 ]
 
 function text (client, event) {
-  keywords.forEach(word => {
-    if (word.match.test(event.message.text)) {
-      return word.handler(client, event)
+  for (var i = 0; i < keywords.length; i++) {
+    if (keywords[i].match.test(event.message.text)) {
+      return keywords[i].handler(client, event)
     }
-  })
+  }
 
   return client.replyMessage(
     event.replyToken,

@@ -1,4 +1,4 @@
-const image = require('assets/images/butter.png')
+const image = require('../../../assets/images/butter.png')
 
 function help (client, event) {
   return client.replyMessage(event.replyToken, {

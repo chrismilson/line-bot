@@ -1,5 +1,6 @@
 const handle = {
-  message: require('./message')
+  message: require('./message'),
+  postback: require('./postback')
   // follow: require('./follow'),
   // unfollow: require('./unfollow'),
   // join: require('./join'),

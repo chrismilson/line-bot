@@ -53,7 +53,7 @@ function help (client, event) {
                   type: 'postback',
                   label: 'Projects',
                   data: 'projects',
-                  displayText: 'I want to see your projects.'
+                  displayText: 'I want to see your projects'
                 }
               },
               {
@@ -64,7 +64,7 @@ function help (client, event) {
                   type: 'postback',
                   label: 'Tour',
                   data: 'tour',
-                  displayText: 'Show me what you can do.'
+                  displayText: 'Show me what you can do'
                 }
               }
             ]
@@ -93,7 +93,7 @@ function help (client, event) {
                   type: 'postback',
                   label: 'Random',
                   data: 'random',
-                  displayText: 'Change color!'
+                  displayText: 'Do something!'
                 }
               }
             ]

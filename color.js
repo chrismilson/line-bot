@@ -2,6 +2,12 @@ var r = 1
 var g = 1
 var b = 1
 
+function randomise () {
+  r = Math.floor(Math.random() * 256)
+  g = Math.floor(Math.random() * 256)
+  b = Math.floor(Math.random() * 256)
+}
+
 function rgb (r, g, b) {
   var rgb = [
     (r % 256).toString(16),
@@ -15,6 +21,7 @@ function rgb (r, g, b) {
 }
 
 module.exports = {
+  randomise: randomise,
   get primary () {
     return rgb(r, g, b)
   },

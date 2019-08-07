@@ -1,5 +1,3 @@
-const image = require('../../../assets/images/butter.png')
-
 function help (client, event) {
   return client.replyMessage(event.replyToken, {
     type: 'flex',
@@ -34,7 +32,7 @@ function help (client, event) {
               },
               {
                 type: 'image',
-                url: image
+                url: 'https://shlappas-line-bot.herokuapp.com/assets/images/butter.png'
               },
               {
                 type: 'text',

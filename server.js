@@ -11,6 +11,8 @@ const app = express()
 const port = process.env.PORT || 3000
 const client = new line.Client(config)
 
+app.use(express.static('assets'))
+
 app.post('/callback', line.middleware(config), (req, res) => {
   Promise
     .all(req.body.events.map(event => handle(client, event)))

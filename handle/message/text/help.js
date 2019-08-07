@@ -3,7 +3,7 @@ const color = require('../../../color')
 function help (client, event) {
   return client.replyMessage(event.replyToken, {
     type: 'flex',
-    altText: 'This is a flex message',
+    altText: 'Let me help you!',
     contents: {
       type: 'bubble',
       header: {

@@ -1,3 +1,5 @@
+const color = require('../../../color')
+
 function help (client, event) {
   return client.replyMessage(event.replyToken, {
     type: 'flex',
@@ -11,7 +13,7 @@ function help (client, event) {
           {
             type: 'text',
             align: 'center',
-            color: '#FFFFFF',
+            color: color.secondary,
             size: 'lg',
             weight: 'bold',
             text: 'Shlappas Help'
@@ -34,7 +36,7 @@ function help (client, event) {
               {
                 type: 'text',
                 wrap: true,
-                text: 'Please choose one of these buttons!'
+                text: 'Let me help you!\nPlease choose one of these buttons!'
               }
             ]
           },
@@ -46,23 +48,23 @@ function help (client, event) {
               {
                 type: 'button',
                 style: 'primary',
-                color: '#000000',
+                color: color.primary,
                 action: {
                   type: 'postback',
-                  label: 'Button 1',
-                  data: 'button 1 pressed',
-                  displayText: 'Pressed!'
+                  label: 'Projects',
+                  data: 'projects',
+                  displayText: 'I want to see your projects.'
                 }
               },
               {
                 type: 'button',
                 style: 'primary',
-                color: '#000000',
+                color: color.primary,
                 action: {
                   type: 'postback',
-                  label: 'Button 2',
-                  data: 'button 2 pressed',
-                  displayText: 'Pressed!'
+                  label: 'Tour',
+                  data: 'tour',
+                  displayText: 'Show me what you can do.'
                 }
               }
             ]
@@ -75,23 +77,23 @@ function help (client, event) {
               {
                 type: 'button',
                 style: 'primary',
-                color: '#000000',
+                color: color.primary,
                 action: {
                   type: 'postback',
-                  label: 'Button 3',
-                  data: 'button 3 pressed',
-                  displayText: 'Pressed!'
+                  label: 'Nothing',
+                  data: 'nothing',
+                  displayText: 'I\'m fine thanks'
                 }
               },
               {
                 type: 'button',
                 style: 'primary',
-                color: '#000000',
+                color: color.primary,
                 action: {
                   type: 'postback',
-                  label: 'Button 4',
-                  data: 'button 4 pressed',
-                  displayText: 'Pressed!'
+                  label: 'Random',
+                  data: 'colour change',
+                  displayText: 'Change color!'
                 }
               }
             ]
@@ -100,7 +102,7 @@ function help (client, event) {
       },
       styles: {
         header: {
-          backgroundColor: '#000000'
+          backgroundColor: color.primary
         }
       }
     }

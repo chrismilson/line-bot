@@ -1,10 +1,21 @@
-const keyword = {
-  shloo: require('./shloo')
-}
+const keywords = [
+  {
+    name: 'Shloo Easter Egg',
+    match: /^shloo$/i,
+    handler: require('./shloo')
+  },
+  {
+    name: 'Helper',
+    match: /^h(elp)?$/i,
+    handler: require('./help')
+  }
+]
 
 function text (client, event) {
-  if (keyword[event.message.text.toLowerCase()] !== undefined) {
-    return keyword[event.message.text.toLowerCase()](client, event)
+  for (var word in keywords) {
+    if (event.message.text.match(word.match)) {
+      return word.handler(client, event)
+    }
   }
 
   return client.replyMessage(

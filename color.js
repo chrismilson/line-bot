@@ -1,11 +1,14 @@
-var r = 1
-var g = 1
-var b = 1
+var r, g, b
+r = g = b = 0
 
 function randomise () {
   r = Math.floor(Math.random() * 256)
   g = Math.floor(Math.random() * 256)
   b = Math.floor(Math.random() * 256)
+}
+
+function revert () {
+  r = g = b = 0
 }
 
 function rgb (r, g, b) {
@@ -21,7 +24,8 @@ function rgb (r, g, b) {
 }
 
 module.exports = {
-  randomise: randomise,
+  randomise,
+  revert,
   get primary () {
     return rgb(r, g, b)
   },

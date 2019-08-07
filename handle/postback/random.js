@@ -4,7 +4,7 @@ function random (client, event) {
   color.randomise()
   return client.replyMessage(event.replyToken, {
     type: 'text',
-    text: 'Not even implemented yet. disappointing.'
+    text: 'I feel funny....'
   })
 }
 

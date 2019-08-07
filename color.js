@@ -26,6 +26,6 @@ module.exports = {
     return rgb(r, g, b)
   },
   get secondary () {
-    return rgb(r + 128, g + 128, b + 128)
+    return rgb(255 - g, 255 - b, 255 - r)
   }
 }

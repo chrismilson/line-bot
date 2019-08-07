@@ -13,7 +13,8 @@ const keywords = [
 
 function text (client, event) {
   for (var word in keywords) {
-    if (event.message.text.match(word.match)) {
+    console.log('Checking for:', word.name)
+    if (word.match.text(event.message.text)) {
       return word.handler(client, event)
     }
   }

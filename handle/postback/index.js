@@ -7,7 +7,7 @@ const keywords = {
 
 function postback (client, event) {
   if (keywords[event.postback.data] !== undefined) {
-    keywords[event.postback.data](client, event)
+    return keywords[event.postback.data](client, event)
   }
 
   throw new Error(`Unknown postback: ${JSON.stringify(event)}`)

@@ -18,6 +18,6 @@
   "homepage": "https://github.com/chrismilson/line-bot#readme",
   "dependencies": {
     "@line/bot-sdk": "^6.8.1",
-    "express": "^4.17.1"
+    "express": "^4.18.2"
   }
 }
